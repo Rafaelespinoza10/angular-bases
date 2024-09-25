@@ -1,0 +1,43 @@
+<h1> {{ name }}</h1>
+<dl>
+
+  <td>Nombre: </td>
+  <dd> {{ name }}</dd>
+
+  <td>Edad: </td>
+  <dd> {{ age }}</dd>
+
+  <td>Metodo: </td>
+  <dd> {{ toString() }}</dd>
+
+  <td>Capitalizado: </td>
+  <dd> {{ getCapitalizedName() }}</dd>
+
+</dl>
+
+<div class="row">
+  <div class="col-md-2 col-xs-6">
+    <button
+    *ngIf="name !=='Spider Man'"
+    class="btn btn-secondary"
+     (click)="changeHero()"
+     > cambiar nombre </button>
+  </div>
+
+  <div class="col-md-2 col-xs-6">
+    <button class="btn btn-danger "
+    *ngIf="age !== 25"
+    (click) = "changeAge()"
+    > Cambiar edad </button>
+  </div>
+
+  <div class="col-md-2 col-xs-6">
+    <button
+      class="btn btn-primary"
+      (click) = "resetForm()"
+    >
+        Reset
+    </button>
+  </div>
+
+</div>

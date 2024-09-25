@@ -1,0 +1,17 @@
+<h1>DBZ Personajes</h1>>
+<hr>
+
+
+<div class="row">
+  <div class="col">
+
+    <dbz-component-figthers [characterList]="character" (onDelete)="onDeleteCharacter($event)" ></dbz-component-figthers>
+  </div>
+
+  <div class="col">
+    <h4>Agregar Personaje: </h4>
+    <dbz-component-forms (onNewCharacter)="onNewCharacter($event)"></dbz-component-forms>
+  </div>
+
+
+</div>
